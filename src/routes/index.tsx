@@ -1,11 +1,12 @@
 // React
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Global routes
+import { App } from "@/App";
 import { AppRoute } from "./app/AppRoute";
 import { ErrorRoute } from "./error/ErrorRoute";
 
 // Feature routes
-import { App } from "@/App";
+import { HomeRoute } from "@/features/home/routes/HomeRoute";
 
 export const routesConfig = [
   {
@@ -15,6 +16,12 @@ export const routesConfig = [
       {
         path: "/",
         element: <AppRoute />,
+        children: [
+          {
+            index: true,
+            element: <HomeRoute />,
+          },
+        ],
       },
     ],
   },
