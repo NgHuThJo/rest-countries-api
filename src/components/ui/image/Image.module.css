@@ -4,10 +4,10 @@
   object-fit: fill;
 }
 
-.image--icon {
+.icon {
   min-width: var(--min-width-icon);
 }
 
-.image--logo {
+.logo {
   min-width: var(--min-width-logo);
 }

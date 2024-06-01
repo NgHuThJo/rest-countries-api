@@ -1,4 +1,4 @@
-// React
+// Third party
 import { Outlet } from "react-router-dom";
 // Context
 import { DataContextProvider } from "./providers/context/DataContext";
@@ -6,7 +6,7 @@ import { DataContextProvider } from "./providers/context/DataContext";
 export function App() {
   return (
     <DataContextProvider>
-      <Outlet />;
+      <Outlet />
     </DataContextProvider>
   );
 }

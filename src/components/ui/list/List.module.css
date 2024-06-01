@@ -1,4 +1,4 @@
-.list--home {
+.default {
   composes: auto-grid from global;
   gap: 2rem;
   grid-auto-rows: 1fr;
