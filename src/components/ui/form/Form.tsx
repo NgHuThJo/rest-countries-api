@@ -1,4 +1,4 @@
-// React
+// Third party
 import { Fragment, useState } from "react";
 // Utility
 import { resolveClassName } from "@/utils/className";

@@ -5,10 +5,10 @@ import { ComponentBaseProps } from "@/types";
 // Styles
 import styles from "./Image.module.css";
 
-interface ImageProps extends ComponentBaseProps {
+type ImageProps = ComponentBaseProps & {
   src: string;
   alt?: string;
-}
+};
 
 export function Image({ src, alt, className, ...restProps }: ImageProps) {
   return (

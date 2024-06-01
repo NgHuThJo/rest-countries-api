@@ -1,4 +1,4 @@
-// React
+// Third party
 import { useState } from "react";
 // Types
 import { GenericObject } from "@/types";

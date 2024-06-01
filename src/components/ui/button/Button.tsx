@@ -6,7 +6,7 @@ import { ComponentBaseProps } from "@/types";
 import styles from "./Button.module.css";
 
 type ButtonProps = ComponentBaseProps & {
-  type?: "submit" | "reset" | "button" | undefined;
+  type?: "submit" | "reset" | "button";
 };
 
 export function Button({

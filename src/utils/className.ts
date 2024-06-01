@@ -14,23 +14,31 @@ type GlobalStyles = {
 export type CombinedStyles = ModuleStyles | GlobalStyles;
 
 export function resolveClassName(
-  classes: CombinedStyles | undefined,
+  classes: CombinedStyles | string | undefined,
   styles: GenericObject<string>
 ) {
   try {
+    if (!classes) {
+      return;
+    }
+
+    if (typeof classes === "string") {
+      return styles[classes] || classes;
+    }
+
     const moduleStyles =
       classes?.module &&
       Array.from(new Set(classes.module))
         .filter((className) => {
           if (hasWhiteSpaces(className)) {
             throw new Error(
-              `css module class "${className}" contains whitespace character`
+              `CSS module class "${className}" contains whitespace character`
             );
           }
 
           if (!styles[className]) {
             throw new ReferenceError(
-              `css module class "${className}" is not defined`
+              `CSS module class "${className}" is not defined`
             );
           }
 

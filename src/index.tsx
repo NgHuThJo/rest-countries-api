@@ -1,8 +1,8 @@
-// React
+// Third party
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Router } from "@/routes";
-// Global styles
+// Global assets
 import "@/assets";
 
 const root = document.getElementById("root");

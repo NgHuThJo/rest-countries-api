@@ -10,7 +10,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "types": ["jest-dom"],
-    "typeRoots": ["node_modules/@testing-library"],
+    "typeRoots": ["./node_modules/@testing-library"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

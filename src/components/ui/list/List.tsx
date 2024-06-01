@@ -1,5 +1,7 @@
 // Types
 import { ComponentBaseProps } from "@/types";
+// Utility
+import { resolveClassName } from "@/utils/className";
 // Styles
 import styles from "./List.module.css";
 
@@ -9,7 +11,7 @@ export function List({
   ...restProps
 }: ComponentBaseProps) {
   return (
-    <ul className={styles[className]} {...restProps}>
+    <ul className={resolveClassName(className, styles)} {...restProps}>
       {children}
     </ul>
   );

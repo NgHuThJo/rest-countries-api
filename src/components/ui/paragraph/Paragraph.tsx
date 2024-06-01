@@ -1,3 +1,5 @@
+// Utility
+import { resolveClassName } from "@/utils/className";
 // Types
 import { GenericObject } from "@/types";
 // Styles
@@ -9,7 +11,7 @@ export function Paragraph({
   ...restProps
 }: GenericObject) {
   return (
-    <p className={styles[className]} {...restProps}>
+    <p className={resolveClassName(className, styles)} {...restProps}>
       {children}
     </p>
   );
