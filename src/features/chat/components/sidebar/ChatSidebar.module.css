@@ -1,0 +1,34 @@
+.layout {
+  --p-item: 1rem;
+
+  border: var(--bd-width) solid hsl(var(--c-border));
+
+  h2 {
+    padding: var(--p-item);
+  }
+}
+
+.room {
+  padding: var(--p-item);
+  border-bottom: var(--bd-width) solid hsl(var(--c-border));
+}
+
+.room:hover {
+  cursor: pointer;
+  color: green;
+}
+
+.user {
+  padding: var(--p-item);
+  border-bottom: var(--bd-width) solid hsl(var(--c-border));
+}
+
+.user:hover {
+  cursor: pointer;
+  color: purple;
+}
+
+.selected {
+  color: hsl(var(--c-selected));
+  background-color: hsl(var(--bgc-selected));
+}

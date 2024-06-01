@@ -1,0 +1,102 @@
+/* Custom properties */
+:root {
+  /* Box model */
+  --p-container: 2rem;
+  --bd-width: 1px;
+  --max-w-content: 80rem;
+  --flow-spacing: 1em;
+
+  /* Grid */
+  --auto-grid-column-w: 20rem;
+
+  --macro-grid-breakout-max-w: 80rem;
+  --macro-grid-content-max-w: 60rem;
+  --macro-grid-breakout-column-w: calc(
+    (var(--macro-grid-breakout-max-w) - var(--macro-grid-content-max-w)) / 2
+  );
+  --macro-grid-p-inline: 2rem;
+
+  /* Typography */
+  --ff-body: system-ui, sans-serif;
+
+  --fw-body: 400;
+  --fw-button: 700;
+
+  --fs-body: 1rem;
+
+  /* Colors */
+  --c-body: 218 11% 65%;
+  --c-border: 218 20% 25%;
+  --c-error: 15 50% 75%;
+  --c-selected: 206 30% 54%;
+
+  --c-root: 216 12% 67%;
+  --c-link: 201 94% 27%;
+
+  --bgc-button: 201 94% 27%;
+  --bgc-input: 222 19% 27%;
+  --bgc-nav: 215 23% 16%;
+  --bgc-root: 216 38% 10%;
+  --bgc-selected: 217 19% 27%;
+
+  /* Transition */
+  --transition-duration: 0.5s;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+body {
+  flex-grow: 1;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-body);
+  font-size: var(--fs-body);
+}
+
+a {
+  text-decoration: underline;
+  color: hsl(var(--c-link));
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input {
+  text-align: right;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* Root styles */
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100svh;
+  color: hsl(var(--c-root));
+  background-color: hsl(var(--bgc-root));
+}

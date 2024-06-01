@@ -1,0 +1,42 @@
+.default {
+  --p-scroll-container: 1rem;
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  input[type="text"] {
+    width: 100%;
+    padding: var(--p-scroll-container);
+  }
+}
+
+.message {
+  width: fit-content;
+  padding: var(--p-scroll-container);
+  border: var(--bd-width) solid hsl(var(--c-border));
+  border-radius: 1rem;
+
+  > * + * {
+    margin-top: 0.5em;
+  }
+}
+
+.message-left {
+  composes: message;
+  justify-self: start;
+}
+
+.message-right {
+  composes: message;
+  justify-self: end;
+}
+
+.scroll-container {
+  display: grid;
+  align-content: start;
+  gap: 2rem;
+  max-height: 45rem;
+  padding: var(--p-scroll-container);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
