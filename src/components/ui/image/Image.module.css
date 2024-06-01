@@ -5,9 +5,6 @@
 }
 
 .icon {
-  min-width: var(--min-width-icon);
-}
-
-.logo {
-  min-width: var(--min-width-logo);
+  min-width: var(--min-w-icon);
+  width: var(--w-icon);
 }

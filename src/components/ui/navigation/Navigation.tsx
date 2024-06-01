@@ -7,7 +7,7 @@ import styles from "./Navigation.module.css";
 
 export function Navigation({
   children,
-  className,
+  className = "default",
   ...restProps
 }: ComponentBaseProps) {
   return (

@@ -92,3 +92,12 @@
 .content {
   grid-column: content;
 }
+
+/* Layout utility classes */
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}

@@ -1,17 +1,14 @@
-.header {
+.default {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: var(--p-container);
+  padding: 3rem var(--p-inline-container);
   background-color: hsl(var(--bgc-nav));
 
-  h1 a {
-    text-decoration: none;
-    color: currentColor;
-  }
-
-  > :last-child {
+  > div {
     display: flex;
+    align-items: center;
     gap: 1rem;
-    margin-left: auto;
+    font-weight: var(--fw-heading-sub);
   }
 }
