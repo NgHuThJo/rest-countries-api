@@ -3,10 +3,24 @@ import { useState } from "react";
 // Context
 import { useDataContext } from "@/providers/context/DataContext";
 import { GenericObject } from "@/types";
+// Components
+import { CountryList } from "../components/country/list/CountryList";
+import { HomeLayout } from "@/components/layouts/home/HomeLayout";
+import { Dropdown } from "@/components/ui/dropdown/Dropdown";
+import { SearchBar } from "@/components/ui/searchbar";
+
+const options = [
+  { label: "Africa", value: "africa" },
+  { label: "America", value: "america" },
+  { label: "Asia", value: "asia" },
+  { label: "Europe", value: "europe" },
+  { label: "Oceania", value: "oceania" },
+];
 
 export function HomeRoute() {
   const { data } = useDataContext();
   const [countries, setCountries] = useState<GenericObject[]>(data);
+  const [selectedContinent, setSelectedContinent] = useState<GenericObject>();
 
   const handleSearch = (event: React.FormEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -21,31 +35,15 @@ export function HomeRoute() {
   };
 
   return (
-    <>
-      <form>
-        <input
-          type="search"
-          id="search"
-          name="search"
-          placeholder="Search for a country..."
+    <HomeLayout>
+      <div>
+        <SearchBar
           onChange={handleSearch}
-        />
-        <select id="region" name="region" defaultValue="">
-          <option value="" disabled>
-            Filter by Region
-          </option>
-          <option value="africa">Africa</option>
-          <option value="america">America</option>
-          <option value="asia">Asia</option>
-          <option value="europe">Europe</option>
-          <option value="oceania">Oceania</option>
-        </select>
-      </form>
-      <ul>
-        {countries.map((country, index) => (
-          <li key={index}>{country.name}</li>
-        ))}
-      </ul>
-    </>
+          placeholder="Search for a country..."
+        ></SearchBar>
+        <Dropdown options={options} onSelect={setSelectedContinent}></Dropdown>
+      </div>
+      <CountryList countries={countries}></CountryList>
+    </HomeLayout>
   );
 }

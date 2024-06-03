@@ -1,0 +1,11 @@
+.default {
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 4rem;
+  }
+}

@@ -6,9 +6,10 @@
   --w-icon: 1.5rem;
   --p-inline-container: 1.5rem;
   --flow-spacing: 1em;
+  --bd-rd-element: 0.5rem;
 
   /* Grid */
-  --auto-grid-column-w: 20rem;
+  --auto-grid-column-w: 15rem;
 
   --macro-grid-breakout-max-w: var(--max-w-content);
   --macro-grid-content-max-w: 60rem;

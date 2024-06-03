@@ -1,0 +1,12 @@
+.default {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 3rem;
+  border-radius: var(--bd-rd-element);
+  background-color: hsl(var(--bgc-element));
+
+  > input {
+    border: none;
+    font-weight: var(--fw-heading-sub);
+  }
+}

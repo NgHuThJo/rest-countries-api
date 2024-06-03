@@ -3,6 +3,26 @@
   background-color: hsl(var(--bgc-button));
 }
 
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 3rem;
+  border-radius: var(--bd-rd-element);
+  background-color: hsl(var(--bgc-element));
+
+  > img {
+    width: 1rem;
+    transition: transform var(--transition-duration);
+  }
+}
+
+.open {
+  img {
+    transform: rotate(180deg);
+  }
+}
+
 .submit {
   composes: default;
   padding: 1rem 3rem;

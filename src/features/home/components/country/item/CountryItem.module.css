@@ -1,0 +1,26 @@
+.default {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  border-radius: var(--bd-rd-element);
+  overflow: hidden;
+  background-color: hsl(var(--bgc-element));
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  > div {
+    display: grid;
+    padding: 1rem 2rem 3rem;
+
+    > * + * {
+      margin-top: var(--flow-spacing);
+    }
+
+    p {
+      font-weight: var(--fw-heading-sub);
+    }
+
+    span {
+      font-weight: var(--fw-root);
+    }
+  }
+}

@@ -14,8 +14,6 @@ export const useDataContext = () => {
 export function DataContextProvider({ children }: ContextProps) {
   const contextValue = useMemo(() => ({ data }), [data]);
 
-  console.log(data);
-
   return (
     <DataContext.Provider value={contextValue}>{children}</DataContext.Provider>
   );
