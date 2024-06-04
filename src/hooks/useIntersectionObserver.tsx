@@ -20,11 +20,9 @@ export function useIntersectionObserver(options?: GenericObject) {
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.disconnect();
     };
-  }, [ref, options]);
+  }, [options]);
 
   return { ref, isInView };
 }

@@ -17,6 +17,10 @@
   }
 }
 
+.dropdown:focus-visible {
+  outline: 2px solid hsl(var(--c-root));
+}
+
 .open {
   img {
     transform: rotate(180deg);

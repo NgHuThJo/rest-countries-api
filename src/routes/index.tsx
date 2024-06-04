@@ -7,6 +7,7 @@ import { ErrorRoute } from "./error/ErrorRoute";
 
 // Feature routes
 import { HomeRoute } from "@/features/home/routes/HomeRoute";
+import { CountryDetails } from "@/features/home/components/country/details/CountryDetails";
 
 export const routesConfig = [
   {
@@ -20,6 +21,10 @@ export const routesConfig = [
           {
             index: true,
             element: <HomeRoute />,
+          },
+          {
+            path: ":country",
+            element: <CountryDetails />,
           },
         ],
       },

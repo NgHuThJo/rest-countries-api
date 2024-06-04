@@ -1,11 +1,18 @@
 .default {
   display: grid;
   grid-template-rows: auto 1fr;
+  padding-bottom: 2rem;
 
   > div:first-child {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
     padding-block: 4rem;
+
+    @media (min-width: 756px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }

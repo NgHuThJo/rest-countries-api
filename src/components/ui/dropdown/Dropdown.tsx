@@ -48,7 +48,7 @@ export function Dropdown({
         <img src={chevronArrow} alt="" />
       </Button>
       {isOpen && (
-        <div className={styles["dropdown-list"]}>
+        <div>
           {options.map((option, index) => (
             <Button key={index} onClick={() => handleSelect(option)}>
               {option.label}

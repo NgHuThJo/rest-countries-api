@@ -50,7 +50,7 @@ export function HomeRoute() {
   });
 
   const handleSearch = (event: React.FormEvent<HTMLInputElement>) => {
-    setSearchQuery(event.currentTarget.value);
+    setSearchQuery(event.currentTarget.value.trim());
 
     debouncedFilteredData();
   };

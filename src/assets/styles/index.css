@@ -1,9 +1,10 @@
 /* Custom properties */
 :root {
   /* Box model */
-  --min-w-icon: 1rem;
+  --min-w-icon: 1.5rem;
   --max-w-content: 80rem;
-  --w-icon: 1.5rem;
+  --max-w-nav: 100rem;
+  --w-icon: 2rem;
   --p-inline-container: 1.5rem;
   --flow-spacing: 1em;
   --bd-rd-element: 0.5rem;
@@ -94,6 +95,7 @@ ul {
 #root {
   display: grid;
   grid-template-rows: auto 1fr;
+  min-width: 20rem;
   min-height: 100svh;
   font-family: var(--ff-root);
   font-weight: var(--fw-root);

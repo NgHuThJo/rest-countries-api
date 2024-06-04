@@ -1,12 +1,26 @@
 .default {
   display: flex;
   gap: 1rem;
-  padding: 1.5rem 3rem;
+  width: fit-content;
+  padding: 1rem;
   border-radius: var(--bd-rd-element);
   background-color: hsl(var(--bgc-element));
 
   > input {
+    width: 25ch;
     border: none;
+    outline: none;
     font-weight: var(--fw-heading-sub);
+    background-color: inherit;
   }
+
+  @media (min-width: 756px) {
+    input {
+      width: 40ch;
+    }
+  }
+}
+
+.default:has(> input:focus) {
+  outline: 2px solid hsl(var(--c-root));
 }

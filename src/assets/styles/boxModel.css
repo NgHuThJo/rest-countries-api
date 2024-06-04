@@ -20,6 +20,6 @@
 
 /* Container */
 .container {
-  width: min(var(--max-w-content), 100% - 2 * var(--p-inline-container));
+  max-width: min(var(--max-w-content), 100% - 2 * var(--p-inline-container));
   margin: 0 auto;
 }

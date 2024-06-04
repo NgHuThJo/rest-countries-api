@@ -1,14 +1,19 @@
 .default {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem var(--p-inline-container);
   background-color: hsl(var(--bgc-nav));
 
   > div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    font-weight: var(--fw-heading-sub);
+    max-width: min(var(--max-w-nav), 100% - 2 * var(--p-inline-container));
+    padding: 3rem 0;
+    margin: 0 auto;
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: var(--fw-heading-sub);
+    }
   }
 }

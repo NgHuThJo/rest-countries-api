@@ -26,7 +26,6 @@ export function SearchBar({
         type="search"
         id="search"
         name="search"
-        size={40}
         placeholder={placeholder}
         onChange={onChange}
       />
