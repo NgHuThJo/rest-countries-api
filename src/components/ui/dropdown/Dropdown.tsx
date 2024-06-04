@@ -7,15 +7,16 @@ import { Button } from "../button";
 // Utility
 import { resolveClassName } from "@/utils/className";
 // Types
-import { ComponentBaseProps, GenericObject } from "@/types";
+import { ComponentBaseProps } from "@/types";
+import { Option } from "@/features/home/types";
 // Styles
 import styles from "./Dropdown.module.css";
 // Assets
 import { chevronArrow } from "@/assets";
 
 type Dropdown = ComponentBaseProps & {
-  options: GenericObject[];
-  onSelect?: React.Dispatch<React.SetStateAction<GenericObject>>;
+  options: Option[];
+  onSelect?: (option: Option) => void;
 };
 
 export function Dropdown({
@@ -23,10 +24,10 @@ export function Dropdown({
   options,
   onSelect,
 }: Dropdown) {
-  const [selectedOption, setSelectedOption] = useState<GenericObject>();
+  const [selectedOption, setSelectedOption] = useState<Option>();
   const { isOpen, close, toggle } = useDisclosure();
 
-  const handleSelect = (option: GenericObject) => {
+  const handleSelect = (option: Option) => {
     setSelectedOption(option);
     close();
 

@@ -40,7 +40,7 @@
 /* Common Grid layout patterns */
 .auto-grid {
   grid-template-columns: repeat(
-    auto-fit,
+    auto-fill,
     minmax(min(var(--auto-grid-column-w), 100%), 1fr)
   );
 }
