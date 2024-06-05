@@ -24,6 +24,7 @@ export const apiClient = {
   delete: (endpoint: string, overrides?: GenericObject) =>
     fetchWrapper(endpoint, {
       method: "DELETE",
+      ...overrides,
     }),
   post: (endpoint: string, data: GenericObject, overrides?: GenericObject) =>
     fetchWrapper(endpoint, {
@@ -32,10 +33,12 @@ export const apiClient = {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
+      ...overrides,
     }),
   put: (endpoint: string, data: GenericObject, overrides?: GenericObject) =>
     fetchWrapper(endpoint, {
       method: "PUT",
       body: JSON.stringify(data),
+      ...overrides,
     }),
 };
