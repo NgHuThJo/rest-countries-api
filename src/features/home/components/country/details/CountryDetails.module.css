@@ -29,6 +29,10 @@
   @media (min-width: 756px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  p {
+    margin-top: 1em;
+  }
 }
 
 .link {
