@@ -10,6 +10,12 @@ function debounce(callback: () => void, delay: number) {
     }, delay);
   };
 
+  debouncedCallback.clear = () => {
+    console.log("Debounce cleared");
+
+    clearTimeout(timer);
+  };
+
   return debouncedCallback;
 }
 
@@ -27,6 +33,12 @@ export function useDebounce(callback: () => void, delay = 1000) {
 
     return debounce(func, delay);
   }, [delay]);
+
+  useEffect(() => {
+    return () => {
+      debouncedCallback.clear();
+    };
+  }, [debouncedCallback]);
 
   return debouncedCallback;
 }

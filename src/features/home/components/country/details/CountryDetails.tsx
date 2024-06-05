@@ -89,6 +89,7 @@ export function CountryDetails() {
                     <Link
                       to={`/${country.name.toLowerCase()}`}
                       className={styles.link}
+                      key={country.numericCode}
                     >
                       {country.name}
                     </Link>
