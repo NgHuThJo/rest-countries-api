@@ -94,9 +94,7 @@ export function CountryDetails() {
                     </Link>
                   ))}
               </div>
-            ) : (
-              "none"
-            )}
+            ) : null}
           </div>
         </div>
       </div>
